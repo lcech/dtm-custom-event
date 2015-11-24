@@ -18,7 +18,9 @@
       setTimeout(function(){
         try {
           document.getElementsByTagName("body")[0].dispatchEvent(new CustomEvent("test", {test: "test"}));
-        } catch (err) {}
+        } catch (err) {
+          alert(err);
+        }
       }, 5000);
     </script>
   </body>
