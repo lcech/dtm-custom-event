@@ -17,7 +17,7 @@
       _satellite.pageBottom();
       setTimeout(function(){
         try {
-          $("body").trigger("test", {test: "test"});
+          document.getElementsByTagName("body")[0].dispatchEvent(new CustomEvent("test", {test: "test"}));
         } catch (err) {}
       }, 5000);
     </script>
